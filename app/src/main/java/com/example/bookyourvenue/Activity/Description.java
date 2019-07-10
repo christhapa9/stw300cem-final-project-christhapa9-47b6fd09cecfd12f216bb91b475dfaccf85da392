@@ -55,7 +55,7 @@ public class Description extends AppCompatActivity {
             }catch (Exception e){
                 Log.d("img", "error"+e);
             }
-            name.setText("Venue Name:" + bundle.getString("venuename"));
+            name.setText("Venue Name:" + bundle.getString("venueName"));
             address.setText("Address:" + bundle.getString("Venue_Place"));
             des.setText("Details:" + bundle.getString("Venue_desc"));
 
