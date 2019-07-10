@@ -10,22 +10,22 @@ public class Venue {
         this.venueimage = venueimage;
         this.details = details;
     }
+//
+//    public Venue(String venueId, String venuename, String address, String venueimage, String details) {
+//        this.venueId = venueId;
+//        this.venuename = venuename;
+//        this.address = address;
+//        this.venueimage = venueimage;
+//        this.details = details;
+//    }
 
-    public Venue(String venueId, String venuename, String address, String venueimage, String details) {
-        this.venueId = venueId;
-        this.venuename = venuename;
-        this.address = address;
-        this.venueimage = venueimage;
-        this.details = details;
-    }
-
-    public static String getVenueId() {
-        return venueId;
-    }
-
-    public void setVenueId(String venueId) {
-        this.venueId = venueId;
-    }
+//    public static String getVenueId() {
+//        return venueId;
+//    }
+//
+//    public void setVenueId(String venueId) {
+//        this.venueId = venueId;
+//    }
 
     public String getVenuename() {
         return venuename;

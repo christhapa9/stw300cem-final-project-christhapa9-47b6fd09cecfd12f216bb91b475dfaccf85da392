@@ -122,7 +122,7 @@ public class VenueAdd extends AppCompatActivity implements View.OnClickListener 
         additem.enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
-                Toast.makeText(VenueAdd.this, "Item Added Successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(VenueAdd.this, "Venue Added Successfully", Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(VenueAdd.this, Dash.class);
                 startActivity(intent);
                 finish();

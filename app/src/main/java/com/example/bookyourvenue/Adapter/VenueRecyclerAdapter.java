@@ -22,6 +22,8 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.List;
 
+import static com.example.bookyourvenue.Api.Url.BASE_URL;
+
 public class VenueRecyclerAdapter extends RecyclerView.Adapter<VenueRecyclerAdapter.VenuesViewHolder> {
     List<Venue> venueList;
     Context context;
@@ -46,7 +48,7 @@ public class VenueRecyclerAdapter extends RecyclerView.Adapter<VenueRecyclerAdap
     @Override
     public void onBindViewHolder(@NonNull final VenuesViewHolder venuesViewHolder, int i) {
         final Venue venues = venueList.get(i);
-        String imgpath = Url.BASE_URL + venues.getVenueimage();
+        String imgpath = BASE_URL + venues.getVenueimage();
         System.out.println(imgpath);
         StrictMode();
         try {
@@ -63,11 +65,13 @@ public class VenueRecyclerAdapter extends RecyclerView.Adapter<VenueRecyclerAdap
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, Description.class);
+
                 intent.putExtra("Venue_name", venues.getVenuename());
                 intent.putExtra("Venue_Place", venues.getAddress());
                 intent.putExtra("Venue_desc", venues.getDetails());
-                intent.putExtra("Venue_img", venues.getVenueimage());
+                intent.putExtra("Venue_img", BASE_URL +"/venueimage/" + venues.getVenueimage());
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
                 context.startActivity(intent);
 
             }
